@@ -1,6 +1,6 @@
 const User = require("../models/user");
 
-module.exports = async (req, res) => {
+module.exports = (req, res) => {
   console.log(req.body);
 
   const user = new User({
@@ -14,6 +14,7 @@ module.exports = async (req, res) => {
       res.send(data);
     })
     .catch((err) => {
+      // if we don't apply a status, then the response will be 200 OK
       res.status(500).send({
         message: err.message || "Some error occurred while creating the User.",
       });

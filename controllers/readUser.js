@@ -5,11 +5,11 @@ module.exports = (req, res) => {
     {
       username: req.body.username,
     },
-    (error, users) => {
+    (error, user) => {
       if (error) {
         console.log(error);
       } else {
-        res.send(users);
+        res.send(user);
       }
     }
   );
