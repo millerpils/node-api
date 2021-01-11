@@ -33,9 +33,15 @@ app.use(
 app.use(express.json());
 
 // connect to mongo
-mongoose.connect("mongodb://localhost/node-mongo-api", {
-  useNewUrlParser: true,
-});
+mongoose.connect(
+  "mongodb://localhost/node-mongo-api",
+  {
+    useNewUrlParser: true,
+  },
+  () => {
+    console.log("Connected to MongoDB");
+  }
+);
 
 // CREATE
 app.post("/users/create", newUserController);
