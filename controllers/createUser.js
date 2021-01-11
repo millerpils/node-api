@@ -1,8 +1,6 @@
 const User = require("../models/user");
 
 module.exports = (req, res) => {
-  console.log(req.body);
-
   const user = new User({
     username: req.body.username,
     password: req.body.password,

@@ -1,12 +1,8 @@
 /*
+Overview:
 
-GOAL:
-
-Use node, mongo, express to create CRUD API with routes 
+Uses node, mongo and express to create CRUD API with routes 
 to create, read, update and delete users.
-
-Later, secure with basic auth.
-
 */
 
 const mongoose = require("mongoose");
