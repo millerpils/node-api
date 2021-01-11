@@ -9,7 +9,7 @@ module.exports = (req, res) => {
   user
     .save()
     .then((data) => {
-      res.send(data);
+      res.send("Created user: " + data);
     })
     .catch((err) => {
       // if we don't apply a status, then the response will be 200 OK

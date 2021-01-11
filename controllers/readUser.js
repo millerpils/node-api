@@ -1,7 +1,7 @@
 const User = require("../models/user");
 
 module.exports = (req, res) => {
-  User.find(
+  User.findOne(
     {
       username: req.body.username,
     },
@@ -9,7 +9,7 @@ module.exports = (req, res) => {
       if (error) {
         console.log(error);
       } else {
-        res.send(user);
+        res.send("Found user: " + user);
       }
     }
   );
