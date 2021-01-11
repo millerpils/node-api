@@ -19,6 +19,7 @@ customAuthoriser = async (basicAuthUsername, basicAuthPassword, cb) => {
 };
 
 getUser = (basicAuthUsername) => {
+  // get the user from mongo
   user = User.findOne({ username: basicAuthUsername }, (error) => {
     if (error) {
       // should return a status here
